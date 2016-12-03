@@ -1,0 +1,2 @@
+/opt/local/bin/ar cq libgtest_main.a  CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+/opt/local/bin/ranlib libgtest_main.a

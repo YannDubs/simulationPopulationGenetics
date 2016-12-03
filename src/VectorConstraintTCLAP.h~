@@ -1,0 +1,120 @@
+/*!
+ * @file VectorConstraintTCLAP.h
+ * @author Yann Dubois et David CLeres
+ * @date 17 Novembre 2015
+ * @version 1.0
+ * @brief somme de vector = 1
+ * 
+ *creates a class that constraints the values of the vector to have a sum equal to 1
+*/ 
+
+#ifndef INTCONSTRAINTTCLAP_H
+#define INTCONSTRAINTTCLAP_H
+
+#include <string>
+#include <vector>
+
+using namespace std;
+
+namespace TCLAP {
+/**
+ * A Constraint that constrains the vector to have a sum equal to 1
+ */
+class VectorConstraintTCLAP 
+{
+
+public:
+	/**
+	 * Virtual destructor.
+	 */
+	 ~VectorConstraintTCLAP() {}
+
+	/**
+	 * Returns a description of the Constraint. 
+	 */
+	string description() const;
+
+	/**
+	 * Returns the short ID for the Constraint.
+	 */
+	string shortID() const;
+
+	/**
+	 * The method used to verify that the value parsed from the command
+	 * line meets the constraint.
+	 * \param value - The value that will be checked. 
+	 */
+	bool check (vector<double> const& Tab) const;
+	
+};
+
+bool VectorConstraintTCLAP::check(vector<double> const& Tab) const
+{
+    double sommeFrequence (0);
+    bool isFreq (true);
+    for (auto const& frequence : Tab)
+    {
+        sommeFrequence += frequence;
+        
+        //regarde si frequence est pas négative
+        if (frequence <= 0)
+        {
+            isFreq = false;
+        }
+    }
+    //DONNE UN INTERVALLE DE TOLÉRANCE POUR LA VALEUR DE LA SOMME DES 
+    //DES FREQUENCES COMME ON NE PEUT PAS DIRECTEMENT COMPRER DES DOUBLES ET 
+    //ET QUE NOUS AVONS PAS TROUVÉ UNE FONCTION PREDEFINIE 
+    bool isOne (sommeFrequence > 0.99999999999 && sommeFrequence < 1.0000000001); 
+    
+    //LA SOMME DES FREQUENCES DES ALLELES DOIT ÊTRE EGALE A 1
+    if ( !isOne || !isFreq)
+    {
+		//TU SAIS SI ON PEUT FAIRE UN THROW ET RETOURNER UN TRUC QUAND MEME ?????? 
+		//throw std::invalid_argument( "received negative value" );
+        return false;
+    }
+    return true;
+}
+
+//SEULEMENT LE GTEST --> FAIRE UN TEST DE TRHOW SI UNE CASE EST NULLE 
+//MAIS C'EST LA MEME FONCTION QUE CELLE AU DESSUS CE QUI PROUVE EN QUELQUE
+//SORTE QUE LA METHODE FONCIONNE. ON NE PEUT PAS METTRE LES DEUX DANS LA MEME 
+//FONCTION CAR ON NE PEUT PAS FAIRE DE THROW ET RETURN A LA FOIS 
+/*void VectorConstraintTCLAP::check_THROW(vector<double> const& Tab) const
+{
+    double sommeFrequence (0);
+    for (auto const& frequence : Tab)
+    {
+        sommeFrequence += frequence;
+        
+        //regarde si frequence est pas négative
+        if (frequence <= 0)
+        {
+			string a ("une des fréquences est négative ou nulle");
+            throw a;
+        }
+    }
+    
+    //LA SOMME DES FREQUENCES DES ALLELES DOIT ÊTRE EGALE A 1
+    if (sommeFrequence != 1)
+    {
+			throw 2;
+    }
+}*/
+
+string VectorConstraintTCLAP::shortID() const
+{
+    string shortID ("entier positif non nul");
+    return shortID;
+}
+
+//type de l'exception
+string VectorConstraintTCLAP::description() const
+{
+    string description ("les fréquences doivent être des entiers positifs non nuls avec comme somme 1");
+    return description;	
+}
+}
+
+#endif
