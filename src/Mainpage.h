@@ -14,7 +14,7 @@
  * @subsection randomMatting Random Matting:
  * @image html randomMating.png
  * @subsection results Results & Plots 
- * @image html RPlots.png "Graphs showing the evolution of the frequences of the different alleles"
+ * @image html RPlots.png "Graphs showing the evolution of the frequences of the different alleles (starting respectively wit 0.8/0.2 and 0.5/0.5 "
  * @image html FixationTimes.png "Fixation Times of different simulations with different sizes of population, different frequences, number generation and number of repeats" 
  * @section mutation_sec Mutation Extension
  * \b -m mutation probability <em> (default: 0)</em>
