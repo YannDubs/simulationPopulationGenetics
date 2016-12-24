@@ -1,0 +1,119 @@
+\hypertarget{main__test_8cpp}{}\section{src/main\+\_\+test.cpp File Reference}
+\label{main__test_8cpp}\index{src/main\+\_\+test.\+cpp@{src/main\+\_\+test.\+cpp}}
+
+
+Tests on the simulation of the wright fisher model.  
+
+
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Pool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Meta\+Pool.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Vector\+Constraint\+T\+C\+L\+A\+P.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Int\+Constraint\+T\+C\+L\+A\+P.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Proba\+Constraint\+T\+C\+L\+A\+P.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Fitness\+Constraint\+T\+C\+L\+A\+P.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{main__test_8cpp_a4912999b93e310540aae6cc45eb9a0c2}{T\+E\+ST} (\hyperlink{class_pool}{Pool}, n\+Individus)
+\begin{DoxyCompactList}\small\item\em Number of individuals tested. \end{DoxyCompactList}\item 
+\hyperlink{main__test_8cpp_ae70d18e73bd86c71d8c8ba9187d8a244}{T\+E\+ST} (\hyperlink{class_pool}{Pool}, Moyenne\+\_\+\+Constante)
+\begin{DoxyCompactList}\small\item\em Check constance of the average frequencies. \end{DoxyCompactList}\item 
+\hyperlink{main__test_8cpp_a356dcb8d06d0028eb2f618a9b9c3e2d5}{T\+E\+ST} (\hyperlink{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p}{Vector\+Constraint\+T\+C\+L\+AP}, sum\+\_\+one\+\_\+and\+\_\+null\+\_\+or\+\_\+negativ)
+\begin{DoxyCompactList}\small\item\em Check If the sum is one. \end{DoxyCompactList}\item 
+\hyperlink{main__test_8cpp_a8455e5b61c80284aa6f6da4c64e42f7f}{T\+E\+ST} (\hyperlink{class_int_constraint_t_c_l_a_p}{Int\+Constraint\+T\+C\+L\+AP}, entier\+\_\+poitive\+\_\+or\+\_\+null)
+\begin{DoxyCompactList}\small\item\em Tests signs of the input. \end{DoxyCompactList}\item 
+\hyperlink{main__test_8cpp_a9058591bb55188cc53a0aa972a42adc9}{T\+E\+ST} (\hyperlink{class_proba_constraint_t_c_l_a_p}{Proba\+Constraint\+T\+C\+L\+AP}, Test\+\_\+mutation\+\_\+range)
+\begin{DoxyCompactList}\small\item\em Tests signs of the input. \end{DoxyCompactList}\item 
+\hyperlink{main__test_8cpp_a50f9c21869018d8f76846077fd24ddbb}{T\+E\+ST} (\hyperlink{class_fitness_constraint_t_c_l_a_p}{Fitness\+Constraint\+T\+C\+L\+AP}, Test\+\_\+fitness\+\_\+range)
+\begin{DoxyCompactList}\small\item\em Tests signs of the input. \end{DoxyCompactList}\item 
+int \hyperlink{main__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em \hyperlink{main__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Tests on the simulation of the wright fisher model. 
+
+\begin{DoxyAuthor}{Author}
+Yann Dubois et David Cleres 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28 november 2015 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 test the programm\+: NB\+: cannot tust much because all our test are made in Tclap 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\hypertarget{main__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{main__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}!main@{main}}
+\index{main@{main}!main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{main__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main()} 
+
+Launches the tests (all the tests) \hypertarget{main__test_8cpp_a4912999b93e310540aae6cc45eb9a0c2}{}\label{main__test_8cpp_a4912999b93e310540aae6cc45eb9a0c2} 
+\index{main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{class_pool}{Pool}}]{,  }\item[{n\+Individus}]{ }\end{DoxyParamCaption})}
+
+
+
+Number of individuals tested. 
+
+Tests if the number of individus {\itshape m\+\_\+n\+Individus} is not smaller or equal then 0. \hypertarget{main__test_8cpp_ae70d18e73bd86c71d8c8ba9187d8a244}{}\label{main__test_8cpp_ae70d18e73bd86c71d8c8ba9187d8a244} 
+\index{main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{class_pool}{Pool}}]{,  }\item[{Moyenne\+\_\+\+Constante}]{ }\end{DoxyParamCaption})}
+
+
+
+Check constance of the average frequencies. 
+
+Assures that the average frequence of each allele stay constant during the generations. We gave an intervalle of 0.\+01 after {\itshape n\+Generations}. This test fails sometimes since we choose to give a very small confidence intervall for the distance to the theoric average value of a specific allele. \hypertarget{main__test_8cpp_a356dcb8d06d0028eb2f618a9b9c3e2d5}{}\label{main__test_8cpp_a356dcb8d06d0028eb2f618a9b9c3e2d5} 
+\index{main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p}{Vector\+Constraint\+T\+C\+L\+AP}}]{,  }\item[{sum\+\_\+one\+\_\+and\+\_\+null\+\_\+or\+\_\+negativ}]{ }\end{DoxyParamCaption})}
+
+
+
+Check If the sum is one. 
+
+Tests if the the sum is equal to one, that we have no negative or null values. (make the same test then check\+\_\+\+T\+H\+R\+O\+W\+\_\+\+T\+E\+S\+T\+I\+NG but does test the return and not the assertions \hypertarget{main__test_8cpp_a8455e5b61c80284aa6f6da4c64e42f7f}{}\label{main__test_8cpp_a8455e5b61c80284aa6f6da4c64e42f7f} 
+\index{main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{class_int_constraint_t_c_l_a_p}{Int\+Constraint\+T\+C\+L\+AP}}]{,  }\item[{entier\+\_\+poitive\+\_\+or\+\_\+null}]{ }\end{DoxyParamCaption})}
+
+
+
+Tests signs of the input. 
+
+Tests if the specific boolean is thrown when we provide negative, null or positive values \hypertarget{main__test_8cpp_a9058591bb55188cc53a0aa972a42adc9}{}\label{main__test_8cpp_a9058591bb55188cc53a0aa972a42adc9} 
+\index{main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{class_proba_constraint_t_c_l_a_p}{Proba\+Constraint\+T\+C\+L\+AP}}]{,  }\item[{Test\+\_\+mutation\+\_\+range}]{ }\end{DoxyParamCaption})}
+
+
+
+Tests signs of the input. 
+
+Tests if the specific boolean is thrown when we provide negative, null or positive values \hypertarget{main__test_8cpp_a50f9c21869018d8f76846077fd24ddbb}{}\label{main__test_8cpp_a50f9c21869018d8f76846077fd24ddbb} 
+\index{main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!main\+\_\+test.\+cpp@{main\+\_\+test.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{class_fitness_constraint_t_c_l_a_p}{Fitness\+Constraint\+T\+C\+L\+AP}}]{,  }\item[{Test\+\_\+fitness\+\_\+range}]{ }\end{DoxyParamCaption})}
+
+
+
+Tests signs of the input. 
+
+Tests if the specific boolean is thrown when we provide negative, null or positive values 

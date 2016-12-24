@@ -1,0 +1,23 @@
+digraph "src/PoolDrep.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="src/PoolDrep.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="Pool.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_pool_8h.html",tooltip="generates a pool of alleles "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="ostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="World.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_world_8hpp.html",tooltip="generates a pool of alleles "];
+  Node4 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="MetaPoolDrep.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_meta_pool_drep_8hpp.html",tooltip="A Pool of Drepanocitose Pools. "];
+  Node6 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node0 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node0 [color="midnightblue",fontsize="10",style="solid"];
+}

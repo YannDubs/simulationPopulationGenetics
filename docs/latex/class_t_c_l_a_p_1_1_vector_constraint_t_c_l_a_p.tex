@@ -1,0 +1,83 @@
+\hypertarget{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p}{}\section{T\+C\+L\+AP\+:\+:Vector\+Constraint\+T\+C\+L\+AP Class Reference}
+\label{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p}\index{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP@{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP}}
+
+
+A Constraint that constrains the vector to have a sum equal to 1.  
+
+
+
+
+{\ttfamily \#include $<$Vector\+Constraint\+T\+C\+L\+A\+P.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p_a7e7bc9274a2fec7590046e1ee3d162cc}{$\sim$\+Vector\+Constraint\+T\+C\+L\+AP} ()
+\begin{DoxyCompactList}\small\item\em Virtual Destructor. \end{DoxyCompactList}\item 
+string \hyperlink{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p_afd3adf7e8e0ab6fac8ca3468fbb85b3d}{description} () const
+\begin{DoxyCompactList}\small\item\em Returns a description of the Constraint. \end{DoxyCompactList}\item 
+string \hyperlink{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p_a7f0263b2cbcff5fda6452dfe7f4dd028}{short\+ID} () const
+\begin{DoxyCompactList}\small\item\em Returns the short ID for the Constraint. \end{DoxyCompactList}\item 
+bool \hyperlink{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p_ab6af148ebdcd114490ff52e1c48af0c4}{check} (vector$<$ double $>$ const \&Tab) const
+\begin{DoxyCompactList}\small\item\em check \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Constraint that constrains the vector to have a sum equal to 1. 
+
+Class that constraints the values of the vector to have a sum equal to (more or less) 1. We say more or less because we are dealing with doubles and we chose to give and Interval of validity of the given frequencies. If the the sum of the frequences is not one, or one frequence is negativ we will not accept this input and tell the user that there is a problem. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p_a7e7bc9274a2fec7590046e1ee3d162cc}{}\label{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p_a7e7bc9274a2fec7590046e1ee3d162cc} 
+\index{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP@{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP}!````~Vector\+Constraint\+T\+C\+L\+AP@{$\sim$\+Vector\+Constraint\+T\+C\+L\+AP}}
+\index{````~Vector\+Constraint\+T\+C\+L\+AP@{$\sim$\+Vector\+Constraint\+T\+C\+L\+AP}!T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP@{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP}}
+\subsubsection{\texorpdfstring{$\sim$\+Vector\+Constraint\+T\+C\+L\+A\+P()}{~VectorConstraintTCLAP()}}
+{\footnotesize\ttfamily T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+A\+P\+::$\sim$\+Vector\+Constraint\+T\+C\+L\+AP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Virtual Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p_ab6af148ebdcd114490ff52e1c48af0c4}{}\label{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p_ab6af148ebdcd114490ff52e1c48af0c4} 
+\index{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP@{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP}!check@{check}}
+\index{check@{check}!T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP@{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+A\+P\+::check (\begin{DoxyParamCaption}\item[{vector$<$ double $>$ const \&}]{Tab }\end{DoxyParamCaption}) const}
+
+
+
+check 
+
+The method used to verify that the value parsed from the command line meets the constraint. 
+\begin{DoxyParams}{Parameters}
+{\em Tab} & The value that will be checked.\+In this case it is the vector with our frequences and we will test if the sum is one and if no allele has a negativ frequence. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p_afd3adf7e8e0ab6fac8ca3468fbb85b3d}{}\label{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p_afd3adf7e8e0ab6fac8ca3468fbb85b3d} 
+\index{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP@{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP}!description@{description}}
+\index{description@{description}!T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP@{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP}}
+\subsubsection{\texorpdfstring{description()}{description()}}
+{\footnotesize\ttfamily string T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+A\+P\+::description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a description of the Constraint. 
+
+\hypertarget{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p_a7f0263b2cbcff5fda6452dfe7f4dd028}{}\label{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p_a7f0263b2cbcff5fda6452dfe7f4dd028} 
+\index{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP@{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP}!short\+ID@{short\+ID}}
+\index{short\+ID@{short\+ID}!T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP@{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP}}
+\subsubsection{\texorpdfstring{short\+I\+D()}{shortID()}}
+{\footnotesize\ttfamily string T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+A\+P\+::short\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the short ID for the Constraint. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_vector_constraint_t_c_l_a_p_8h}{Vector\+Constraint\+T\+C\+L\+A\+P.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,33 @@
+\hypertarget{_vector_constraint_t_c_l_a_p_8h}{}\section{src/\+Vector\+Constraint\+T\+C\+L\+AP.h File Reference}
+\label{_vector_constraint_t_c_l_a_p_8h}\index{src/\+Vector\+Constraint\+T\+C\+L\+A\+P.\+h@{src/\+Vector\+Constraint\+T\+C\+L\+A\+P.\+h}}
+
+
+Constraint we want to apply to the inputs of the user.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_t_c_l_a_p_1_1_vector_constraint_t_c_l_a_p}{T\+C\+L\+A\+P\+::\+Vector\+Constraint\+T\+C\+L\+AP}
+\begin{DoxyCompactList}\small\item\em A Constraint that constrains the vector to have a sum equal to 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_t_c_l_a_p}{T\+C\+L\+AP}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Constraint we want to apply to the inputs of the user. 
+
+\begin{DoxyAuthor}{Author}
+Yann Dubois et David C\+Leres 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+17 Novembre 2015 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 Class that constraints the values of the vector to have a sum equal to (more or less) 1. We say more or less because we are dealing with doubles and we chose to give and Interval of validity of the given frequencies. If the the sum of the frequences is not one, or one frequence is negativ we will not accept this input and tell the user that there is a problem. 
+\end{DoxyVersion}

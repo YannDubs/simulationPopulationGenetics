@@ -1,0 +1,197 @@
+\hypertarget{class_pool}{}\section{Pool Class Reference}
+\label{class_pool}\index{Pool@{Pool}}
+
+
+class containing all the alleles  
+
+
+
+
+{\ttfamily \#include $<$Pool.\+h$>$}
+
+Inheritance diagram for Pool\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pool}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_pool_a6dac3ebc3877919011d52813b29ac40d}{Pool} (std\+::vector$<$ double $>$ const \&tab\+Freq, unsigned int const \&n\+Individu, double const \&taux\+Mutation=0, std\+::vector$<$ double $>$ const \&fitness=std\+::vector$<$ double $>$())
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\hyperlink{class_pool_a9118276ec1fb24c7817a0841ee499de5}{Pool} ()=default
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_pool_ad497f611cb592a6dd13f07b217bfd350}{next\+Generation\+General} ()
+\begin{DoxyCompactList}\small\item\em new freqencies of alleles \end{DoxyCompactList}\item 
+void \hyperlink{class_pool_ac90588d0038d9b0308a0ca22f6765b66}{affiche} (std\+::ostream \&output) const
+\begin{DoxyCompactList}\small\item\em Displays the calculed frequencies. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{class_pool_ad8b624c907ee7fccec34c124cb9613fa}{get\+Tab} () const
+\begin{DoxyCompactList}\small\item\em Allows to access the number of Alleles. \end{DoxyCompactList}\item 
+void \hyperlink{class_pool_a358feab3c6d569ee8044fa41e6da3d74}{bottleneck} ()
+\begin{DoxyCompactList}\small\item\em bottleneck effect \end{DoxyCompactList}\item 
+virtual \hyperlink{class_pool_a2157e55ddcb79eec5d74468ad49e6324}{$\sim$\+Pool} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{class_pool_aa42040dcc5fc415227c86f684e40eb0c}{m\+\_\+n\+Allele}
+\item 
+std\+::vector$<$ double $>$ \hyperlink{class_pool_ad3a94e7a298126eee82a7b4796a9970e}{m\+\_\+tab\+Freq}
+\item 
+unsigned int \hyperlink{class_pool_ae07f1e012a30ee7bb47280d03b5ccfb6}{m\+\_\+n\+Individu}
+\item 
+double \hyperlink{class_pool_a2d1dff3e84b72f7048d33dc3d711e9e0}{m\+\_\+taux\+Mutation}
+\item 
+std\+::vector$<$ double $>$ \hyperlink{class_pool_ab45fcdb067197181cace169cf12aedd2}{m\+\_\+fitness}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class containing all the alleles 
+
+Class containing all the alleles of the population at a certain time 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_pool_a6dac3ebc3877919011d52813b29ac40d}{}\label{class_pool_a6dac3ebc3877919011d52813b29ac40d} 
+\index{Pool@{Pool}!Pool@{Pool}}
+\index{Pool@{Pool}!Pool@{Pool}}
+\subsubsection{\texorpdfstring{Pool()}{Pool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pool\+::\+Pool (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ const \&}]{tab\+Freq,  }\item[{unsigned int const \&}]{n\+Individu,  }\item[{double const \&}]{taux\+Mutation = {\ttfamily 0},  }\item[{std\+::vector$<$ double $>$ const \&}]{fitness = {\ttfamily std\+:\+:vector$<$~double~$>$()} }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+Must provide vector containing the frequencies of the alleles {\itshape tab\+Freq}, sample size {\itshape n\+Individus}, the fitness (natural advantage of one gene in comparison to the other genes) {\itshape fitness} and the mutation rate {\itshape taux\+Mutation} 
+\begin{DoxyParams}{Parameters}
+{\em fitness} & evolutive advantage of the allele in comparison to the others (optional) \\
+\hline
+{\em tab\+Freq} & vector containing the frequencies of the alleles must provide \\
+\hline
+{\em n\+Individus} & sample size must provide \\
+\hline
+{\em taux\+Mutation} & Mutation rate of a specific Allele (optional) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pool_a9118276ec1fb24c7817a0841ee499de5}{}\label{class_pool_a9118276ec1fb24c7817a0841ee499de5} 
+\index{Pool@{Pool}!Pool@{Pool}}
+\index{Pool@{Pool}!Pool@{Pool}}
+\subsubsection{\texorpdfstring{Pool()}{Pool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Pool\+::\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+default constructor 
+
+Necessary since we work with vectors for which the initialisation of the type containing the vector must have a default constructor \hypertarget{class_pool_a2157e55ddcb79eec5d74468ad49e6324}{}\label{class_pool_a2157e55ddcb79eec5d74468ad49e6324} 
+\index{Pool@{Pool}!````~Pool@{$\sim$\+Pool}}
+\index{````~Pool@{$\sim$\+Pool}!Pool@{Pool}}
+\subsubsection{\texorpdfstring{$\sim$\+Pool()}{~Pool()}}
+{\footnotesize\ttfamily Pool\+::$\sim$\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_pool_ac90588d0038d9b0308a0ca22f6765b66}{}\label{class_pool_ac90588d0038d9b0308a0ca22f6765b66} 
+\index{Pool@{Pool}!affiche@{affiche}}
+\index{affiche@{affiche}!Pool@{Pool}}
+\subsubsection{\texorpdfstring{affiche()}{affiche()}}
+{\footnotesize\ttfamily void Pool\+::affiche (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{output }\end{DoxyParamCaption}) const}
+
+
+
+Displays the calculed frequencies. 
+
+Displays in the output file the frenquencies of each allele 
+\begin{DoxyParams}{Parameters}
+{\em $<$em$>$output$<$/em$>$} & \+: output file must provide \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pool_a358feab3c6d569ee8044fa41e6da3d74}{}\label{class_pool_a358feab3c6d569ee8044fa41e6da3d74} 
+\index{Pool@{Pool}!bottleneck@{bottleneck}}
+\index{bottleneck@{bottleneck}!Pool@{Pool}}
+\subsubsection{\texorpdfstring{bottleneck()}{bottleneck()}}
+{\footnotesize\ttfamily void Pool\+::bottleneck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+bottleneck effect 
+
+creates a natural disaster which randomly kills 90\% of the population \hypertarget{class_pool_ad8b624c907ee7fccec34c124cb9613fa}{}\label{class_pool_ad8b624c907ee7fccec34c124cb9613fa} 
+\index{Pool@{Pool}!get\+Tab@{get\+Tab}}
+\index{get\+Tab@{get\+Tab}!Pool@{Pool}}
+\subsubsection{\texorpdfstring{get\+Tab()}{getTab()}}
+{\footnotesize\ttfamily vector$<$ double $>$ Pool\+::get\+Tab (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Allows to access the number of Alleles. 
+
+Getteur fonction allowing the acces to the tab containning the frequences of each allele\+: in order to do a gtest on the mean \begin{DoxyReturn}{Returns}
+the array of frequencies 
+\end{DoxyReturn}
+\hypertarget{class_pool_ad497f611cb592a6dd13f07b217bfd350}{}\label{class_pool_ad497f611cb592a6dd13f07b217bfd350} 
+\index{Pool@{Pool}!next\+Generation\+General@{next\+Generation\+General}}
+\index{next\+Generation\+General@{next\+Generation\+General}!Pool@{Pool}}
+\subsubsection{\texorpdfstring{next\+Generation\+General()}{nextGenerationGeneral()}}
+{\footnotesize\ttfamily void Pool\+::next\+Generation\+General (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+new freqencies of alleles 
+
+Computes the next generation (i.\+e. the new frequences) of each allele consideration either\+:
+
+
+\begin{DoxyItemize}
+\item The easiest case\+: Simulates the next generation of allelic distribution, with no consideration of mutations, selection, etc. Simplest simulation in term of concepts.
+\item Considering Mutations\+: Simulates the next generation of allelic distribution, with no consideration of selection but with consideration. Input need to provide the mutation rate.
+\item Considering selection\+: Simulates the next generation of allelic distribution, with no consideration of mutation but with consideration of selection. Input need to provide the table of fitness. (Provide the fitness one by one with the prefix -\/s) 
+\end{DoxyItemize}
+
+Reimplemented in \hyperlink{class_pool_drep_a4fba163580813690fbeb2d4ad0841a86}{Pool\+Drep}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_pool_ab45fcdb067197181cace169cf12aedd2}{}\label{class_pool_ab45fcdb067197181cace169cf12aedd2} 
+\index{Pool@{Pool}!m\+\_\+fitness@{m\+\_\+fitness}}
+\index{m\+\_\+fitness@{m\+\_\+fitness}!Pool@{Pool}}
+\subsubsection{\texorpdfstring{m\+\_\+fitness}{m\_fitness}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Pool\+::m\+\_\+fitness\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{class_pool_aa42040dcc5fc415227c86f684e40eb0c}{}\label{class_pool_aa42040dcc5fc415227c86f684e40eb0c} 
+\index{Pool@{Pool}!m\+\_\+n\+Allele@{m\+\_\+n\+Allele}}
+\index{m\+\_\+n\+Allele@{m\+\_\+n\+Allele}!Pool@{Pool}}
+\subsubsection{\texorpdfstring{m\+\_\+n\+Allele}{m\_nAllele}}
+{\footnotesize\ttfamily unsigned int Pool\+::m\+\_\+n\+Allele\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{class_pool_ae07f1e012a30ee7bb47280d03b5ccfb6}{}\label{class_pool_ae07f1e012a30ee7bb47280d03b5ccfb6} 
+\index{Pool@{Pool}!m\+\_\+n\+Individu@{m\+\_\+n\+Individu}}
+\index{m\+\_\+n\+Individu@{m\+\_\+n\+Individu}!Pool@{Pool}}
+\subsubsection{\texorpdfstring{m\+\_\+n\+Individu}{m\_nIndividu}}
+{\footnotesize\ttfamily unsigned int Pool\+::m\+\_\+n\+Individu\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{class_pool_ad3a94e7a298126eee82a7b4796a9970e}{}\label{class_pool_ad3a94e7a298126eee82a7b4796a9970e} 
+\index{Pool@{Pool}!m\+\_\+tab\+Freq@{m\+\_\+tab\+Freq}}
+\index{m\+\_\+tab\+Freq@{m\+\_\+tab\+Freq}!Pool@{Pool}}
+\subsubsection{\texorpdfstring{m\+\_\+tab\+Freq}{m\_tabFreq}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Pool\+::m\+\_\+tab\+Freq\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{class_pool_a2d1dff3e84b72f7048d33dc3d711e9e0}{}\label{class_pool_a2d1dff3e84b72f7048d33dc3d711e9e0} 
+\index{Pool@{Pool}!m\+\_\+taux\+Mutation@{m\+\_\+taux\+Mutation}}
+\index{m\+\_\+taux\+Mutation@{m\+\_\+taux\+Mutation}!Pool@{Pool}}
+\subsubsection{\texorpdfstring{m\+\_\+taux\+Mutation}{m\_tauxMutation}}
+{\footnotesize\ttfamily double Pool\+::m\+\_\+taux\+Mutation\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_pool_8h}{Pool.\+h}\item 
+src/\hyperlink{_pool_8cpp}{Pool.\+cpp}\end{DoxyCompactItemize}

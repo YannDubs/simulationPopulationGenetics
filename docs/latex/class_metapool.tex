@@ -1,0 +1,120 @@
+\hypertarget{class_metapool}{}\section{Metapool Class Reference}
+\label{class_metapool}\index{Metapool@{Metapool}}
+
+
+class containing all the alleles  
+
+
+
+
+{\ttfamily \#include $<$Meta\+Pool.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_metapool_a40f55ee361d80463bb5f8afac39000d9}{Metapool} (unsigned int const \&repeats, \hyperlink{class_pool}{Pool} const \&x)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\hyperlink{class_metapool_a727b9683d9b15b0d07a0a83ce25bbdcd}{Metapool} ()=default
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+void \hyperlink{class_metapool_aff52cdb3a0fbdca26b966213aaf3577b}{next\+Generation\+General} ()
+\begin{DoxyCompactList}\small\item\em Next Generation General. \end{DoxyCompactList}\item 
+double \hyperlink{class_metapool_af391e0b9374cd19ec027437a4aa83d7f}{freq\+Moyenne} (unsigned int const \&indice) const
+\begin{DoxyCompactList}\small\item\em Average of Frequencies. \end{DoxyCompactList}\item 
+void \hyperlink{class_metapool_a057829fc0c87436e1d7d5c4e14d7ef4f}{affiche} (ostream \&output) const
+\begin{DoxyCompactList}\small\item\em Display/\+Output Fonction. \end{DoxyCompactList}\item 
+void \hyperlink{class_metapool_a54acb827f5913283577c5e1830f3bf2e}{bottleneck} ()
+\begin{DoxyCompactList}\small\item\em bottleneck effect \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class containing all the alleles 
+
+Class containing all the pools in order to simulate multiple repeats 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_metapool_a40f55ee361d80463bb5f8afac39000d9}{}\label{class_metapool_a40f55ee361d80463bb5f8afac39000d9} 
+\index{Metapool@{Metapool}!Metapool@{Metapool}}
+\index{Metapool@{Metapool}!Metapool@{Metapool}}
+\subsubsection{\texorpdfstring{Metapool()}{Metapool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Metapool\+::\+Metapool (\begin{DoxyParamCaption}\item[{unsigned int const \&}]{repeats,  }\item[{\hyperlink{class_pool}{Pool} const \&}]{x }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+Must provide number of repeats {\itshape repeats}, vector containing the frequencies of the alleles {\itshape tab\+Freq} and sample size {\itshape n\+Individus}. 
+\begin{DoxyParams}{Parameters}
+{\em repeats} & number of simultaneous simulations must provide \\
+\hline
+{\em x} & name of the pool we want to take as a initial value ( one pool si containing a vector with the allelic frequencies) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_metapool_a727b9683d9b15b0d07a0a83ce25bbdcd}{}\label{class_metapool_a727b9683d9b15b0d07a0a83ce25bbdcd} 
+\index{Metapool@{Metapool}!Metapool@{Metapool}}
+\index{Metapool@{Metapool}!Metapool@{Metapool}}
+\subsubsection{\texorpdfstring{Metapool()}{Metapool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Metapool\+::\+Metapool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+default constructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_metapool_a057829fc0c87436e1d7d5c4e14d7ef4f}{}\label{class_metapool_a057829fc0c87436e1d7d5c4e14d7ef4f} 
+\index{Metapool@{Metapool}!affiche@{affiche}}
+\index{affiche@{affiche}!Metapool@{Metapool}}
+\subsubsection{\texorpdfstring{affiche()}{affiche()}}
+{\footnotesize\ttfamily void Metapool\+::affiche (\begin{DoxyParamCaption}\item[{ostream \&}]{output }\end{DoxyParamCaption}) const}
+
+
+
+Display/\+Output Fonction. 
+
+Displays on Terminal or writes in the specified stream the output frequences calculated by the method next generation. 
+\begin{DoxyParams}{Parameters}
+{\em The} & name of the stream output \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_metapool_a54acb827f5913283577c5e1830f3bf2e}{}\label{class_metapool_a54acb827f5913283577c5e1830f3bf2e} 
+\index{Metapool@{Metapool}!bottleneck@{bottleneck}}
+\index{bottleneck@{bottleneck}!Metapool@{Metapool}}
+\subsubsection{\texorpdfstring{bottleneck()}{bottleneck()}}
+{\footnotesize\ttfamily void Metapool\+::bottleneck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+bottleneck effect 
+
+creates a natural disaster which randomly kills 90\% of the population \hypertarget{class_metapool_af391e0b9374cd19ec027437a4aa83d7f}{}\label{class_metapool_af391e0b9374cd19ec027437a4aa83d7f} 
+\index{Metapool@{Metapool}!freq\+Moyenne@{freq\+Moyenne}}
+\index{freq\+Moyenne@{freq\+Moyenne}!Metapool@{Metapool}}
+\subsubsection{\texorpdfstring{freq\+Moyenne()}{freqMoyenne()}}
+{\footnotesize\ttfamily double Metapool\+::freq\+Moyenne (\begin{DoxyParamCaption}\item[{unsigned int const \&}]{indice }\end{DoxyParamCaption}) const}
+
+
+
+Average of Frequencies. 
+
+computes the mean of the frequencies of each repeats 
+\begin{DoxyParams}{Parameters}
+{\em The} & indice of the allele in the table \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_metapool_aff52cdb3a0fbdca26b966213aaf3577b}{}\label{class_metapool_aff52cdb3a0fbdca26b966213aaf3577b} 
+\index{Metapool@{Metapool}!next\+Generation\+General@{next\+Generation\+General}}
+\index{next\+Generation\+General@{next\+Generation\+General}!Metapool@{Metapool}}
+\subsubsection{\texorpdfstring{next\+Generation\+General()}{nextGenerationGeneral()}}
+{\footnotesize\ttfamily void Metapool\+::next\+Generation\+General (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Next Generation General. 
+
+Simulates the next generation of allelic distribution, with consideration of mutations, selection, etc..The considered phenonems are tested and considerated in the Next\+Generation method of \hyperlink{class_pool}{Pool}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_meta_pool_8hpp}{Meta\+Pool.\+hpp}\item 
+src/\hyperlink{_meta_pool_8cpp}{Meta\+Pool.\+cpp}\end{DoxyCompactItemize}

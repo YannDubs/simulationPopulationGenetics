@@ -1,0 +1,135 @@
+\hypertarget{class_world}{}\section{World Class Reference}
+\label{class_world}\index{World@{World}}
+
+
+generator class  
+
+
+
+
+{\ttfamily \#include $<$World.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_world_aed1cdfa4b09eabaacaea9c13bf14e750}{World} (std\+::vector$<$ \hyperlink{class_metapool_drep}{Metapool\+Drep} $>$ const \&set\+Of\+Meta\+Pools)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+vector$<$ unsigned int $>$ \hyperlink{class_world_a40ce949759360b92a1f6e47224daa2fc}{imigrants} (vector$<$ unsigned int $>$ const \&pays1, vector$<$ unsigned int $>$ const \&pays2) const
+\begin{DoxyCompactList}\small\item\em Sums the migrants. \end{DoxyCompactList}\item 
+vector$<$ unsigned int $>$ \hyperlink{class_world_ad185335070e7c2590171587204420bd3}{emigration} (string const \&nom\+Pays, unsigned int const \&nb\+Case)
+\begin{DoxyCompactList}\small\item\em gives the migrants of a certain countries \end{DoxyCompactList}\item 
+void \hyperlink{class_world_a9642cb87f57244d1c864d6e2f1b122dd}{affiche} (std\+::ostream \&output) const
+\begin{DoxyCompactList}\small\item\em Displays the calculed frequencies. \end{DoxyCompactList}\item 
+void \hyperlink{class_world_ad1fe0da97eb87bea63accfa04527fd6f}{affiche} (std\+::ostream \&outputA, std\+::ostream \&outputB, std\+::ostream \&outputC) const
+\begin{DoxyCompactList}\small\item\em Displays the calculed frequencies. \end{DoxyCompactList}\item 
+void \hyperlink{class_world_ad3fe092969b31b0e9d5094d2135f4033}{next\+Generation\+General} ()
+\begin{DoxyCompactList}\small\item\em computes new generation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+generator class 
+
+Class containing multiple countries (metapools) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_world_aed1cdfa4b09eabaacaea9c13bf14e750}{}\label{class_world_aed1cdfa4b09eabaacaea9c13bf14e750} 
+\index{World@{World}!World@{World}}
+\index{World@{World}!World@{World}}
+\subsubsection{\texorpdfstring{World()}{World()}}
+{\footnotesize\ttfamily World\+::\+World (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{class_metapool_drep}{Metapool\+Drep} $>$ const \&}]{set\+Of\+Meta\+Pools }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+Must provide vector containing the multiple metapools {\itshape set\+Of\+Meta\+Pools} 
+\begin{DoxyParams}{Parameters}
+{\em set\+Of\+Pools} & vector of the different countries (metapools) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_world_a9642cb87f57244d1c864d6e2f1b122dd}{}\label{class_world_a9642cb87f57244d1c864d6e2f1b122dd} 
+\index{World@{World}!affiche@{affiche}}
+\index{affiche@{affiche}!World@{World}}
+\subsubsection{\texorpdfstring{affiche()}{affiche()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void World\+::affiche (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{output }\end{DoxyParamCaption}) const}
+
+
+
+Displays the calculed frequencies. 
+
+Displays in the output file the frenquencies of each allele 
+\begin{DoxyParams}{Parameters}
+{\em output} & output file must provide \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_world_ad1fe0da97eb87bea63accfa04527fd6f}{}\label{class_world_ad1fe0da97eb87bea63accfa04527fd6f} 
+\index{World@{World}!affiche@{affiche}}
+\index{affiche@{affiche}!World@{World}}
+\subsubsection{\texorpdfstring{affiche()}{affiche()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void World\+::affiche (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{outputA,  }\item[{std\+::ostream \&}]{outputB,  }\item[{std\+::ostream \&}]{outputC }\end{DoxyParamCaption}) const}
+
+
+
+Displays the calculed frequencies. 
+
+Displays in the output file the frenquencies of each allele 
+\begin{DoxyParams}{Parameters}
+{\em outputA} & output file for Cameroon must provide \\
+\hline
+{\em outputB} & output file for Congo must provide \\
+\hline
+{\em outputC} & output file for Gabon must provide \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_world_ad185335070e7c2590171587204420bd3}{}\label{class_world_ad185335070e7c2590171587204420bd3} 
+\index{World@{World}!emigration@{emigration}}
+\index{emigration@{emigration}!World@{World}}
+\subsubsection{\texorpdfstring{emigration()}{emigration()}}
+{\footnotesize\ttfamily vector$<$ unsigned int $>$ World\+::emigration (\begin{DoxyParamCaption}\item[{string const \&}]{nom\+Pays,  }\item[{unsigned int const \&}]{nb\+Case }\end{DoxyParamCaption})}
+
+
+
+gives the migrants of a certain countries 
+
+Computes randomly the migrants going from a certain country {\itshape nom\+Pays} in a certain repeat known by the {\itshape nb\+Case} cell in which the repeat is contained in the metapool, to an other country 
+\begin{DoxyParams}{Parameters}
+{\em nom\+Pays} & the country from which they are leaving \\
+\hline
+{\em nb\+Case} & the repeat we are lookning at \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the array of the migrants from a country to an other 
+\end{DoxyReturn}
+\hypertarget{class_world_a40ce949759360b92a1f6e47224daa2fc}{}\label{class_world_a40ce949759360b92a1f6e47224daa2fc} 
+\index{World@{World}!imigrants@{imigrants}}
+\index{imigrants@{imigrants}!World@{World}}
+\subsubsection{\texorpdfstring{imigrants()}{imigrants()}}
+{\footnotesize\ttfamily vector$<$ unsigned int $>$ World\+::imigrants (\begin{DoxyParamCaption}\item[{vector$<$ unsigned int $>$ const \&}]{pays1,  }\item[{vector$<$ unsigned int $>$ const \&}]{pays2 }\end{DoxyParamCaption}) const}
+
+
+
+Sums the migrants. 
+
+computes the sum of the differents migrants depending on the alleles \begin{DoxyReturn}{Returns}
+the array of the sum of migrants 
+\end{DoxyReturn}
+\hypertarget{class_world_ad3fe092969b31b0e9d5094d2135f4033}{}\label{class_world_ad3fe092969b31b0e9d5094d2135f4033} 
+\index{World@{World}!next\+Generation\+General@{next\+Generation\+General}}
+\index{next\+Generation\+General@{next\+Generation\+General}!World@{World}}
+\subsubsection{\texorpdfstring{next\+Generation\+General()}{nextGenerationGeneral()}}
+{\footnotesize\ttfamily void World\+::next\+Generation\+General (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+computes new generation 
+
+Computes the new frequencies of each allele in each pool 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_world_8hpp}{World.\+hpp}\item 
+src/\hyperlink{_world_8cpp}{World.\+cpp}\end{DoxyCompactItemize}

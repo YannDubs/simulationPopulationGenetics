@@ -1,0 +1,99 @@
+\hypertarget{_world_8hpp}{}\section{src/\+World.hpp File Reference}
+\label{_world_8hpp}\index{src/\+World.\+hpp@{src/\+World.\+hpp}}
+
+
+generates a pool of alleles  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}Meta\+Pool\+Drep.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Pool\+Drep.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_world}{World}
+\begin{DoxyCompactList}\small\item\em generator class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_world_8hpp_aad72c6f5589c755c9adac47f907d820d}{Pays} \{ \hyperlink{_world_8hpp_aad72c6f5589c755c9adac47f907d820da7266789005e17e9a06cd63a959a5f707}{C\+O\+N\+GO}, 
+\hyperlink{_world_8hpp_aad72c6f5589c755c9adac47f907d820dac61a94a2d8f39fdddd9f507e1d3d04a7}{C\+A\+M\+E\+R\+O\+ON}, 
+\hyperlink{_world_8hpp_aad72c6f5589c755c9adac47f907d820dab1c652734bd3047b50c67950537dccbc}{G\+A\+B\+ON}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{_world_8hpp_ad1d2d11c21f1e32ce1012ad68900784f}{annee\+Generation} (22)
+\item 
+const int \hyperlink{_world_8hpp_a1a16e9a55cf14f56489a8a4d08d29100}{migrantscongo\+\_\+gabon} (23 $\ast$\hyperlink{_world_8hpp_ad1d2d11c21f1e32ce1012ad68900784f}{annee\+Generation})
+\item 
+const int \hyperlink{_world_8hpp_a2609f68b19ecd967962de5e4d6b845d1}{migrantsgabon\+\_\+cameroon} (240 $\ast$\hyperlink{_world_8hpp_ad1d2d11c21f1e32ce1012ad68900784f}{annee\+Generation})
+\item 
+const int \hyperlink{_world_8hpp_aea9efc00a299b793738741c5c2d32316}{migrantscameroon\+\_\+congo} (50 $\ast$\hyperlink{_world_8hpp_ad1d2d11c21f1e32ce1012ad68900784f}{annee\+Generation})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+generates a pool of alleles 
+
+\begin{DoxyAuthor}{Author}
+Yann Dubois \& David Cleres 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+28 november 2015 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 \hyperlink{class_metapool_drep}{Metapool\+Drep} is in this case a country and we are simulating the evolution of anemia in Cameroon, Gaboon and Congo. The \hyperlink{class_world}{World} is a set of 3 Metapools\+Drep. (The Metapools is itself containing the number of test repeats of the sample simulation on the same sample. 
+\end{DoxyVersion}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_world_8hpp_aad72c6f5589c755c9adac47f907d820d}{}\label{_world_8hpp_aad72c6f5589c755c9adac47f907d820d} 
+\index{World.\+hpp@{World.\+hpp}!Pays@{Pays}}
+\index{Pays@{Pays}!World.\+hpp@{World.\+hpp}}
+\subsubsection{\texorpdfstring{Pays}{Pays}}
+{\footnotesize\ttfamily enum \hyperlink{_world_8hpp_aad72c6f5589c755c9adac47f907d820d}{Pays}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+O\+N\+GO@{C\+O\+N\+GO}!World.\+hpp@{World.\+hpp}}\index{World.\+hpp@{World.\+hpp}!C\+O\+N\+GO@{C\+O\+N\+GO}}}\hypertarget{_world_8hpp_aad72c6f5589c755c9adac47f907d820da7266789005e17e9a06cd63a959a5f707}{}\label{_world_8hpp_aad72c6f5589c755c9adac47f907d820da7266789005e17e9a06cd63a959a5f707} 
+C\+O\+N\+GO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+A\+M\+E\+R\+O\+ON@{C\+A\+M\+E\+R\+O\+ON}!World.\+hpp@{World.\+hpp}}\index{World.\+hpp@{World.\+hpp}!C\+A\+M\+E\+R\+O\+ON@{C\+A\+M\+E\+R\+O\+ON}}}\hypertarget{_world_8hpp_aad72c6f5589c755c9adac47f907d820dac61a94a2d8f39fdddd9f507e1d3d04a7}{}\label{_world_8hpp_aad72c6f5589c755c9adac47f907d820dac61a94a2d8f39fdddd9f507e1d3d04a7} 
+C\+A\+M\+E\+R\+O\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+A\+B\+ON@{G\+A\+B\+ON}!World.\+hpp@{World.\+hpp}}\index{World.\+hpp@{World.\+hpp}!G\+A\+B\+ON@{G\+A\+B\+ON}}}\hypertarget{_world_8hpp_aad72c6f5589c755c9adac47f907d820dab1c652734bd3047b50c67950537dccbc}{}\label{_world_8hpp_aad72c6f5589c755c9adac47f907d820dab1c652734bd3047b50c67950537dccbc} 
+G\+A\+B\+ON&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\hypertarget{_world_8hpp_ad1d2d11c21f1e32ce1012ad68900784f}{}\label{_world_8hpp_ad1d2d11c21f1e32ce1012ad68900784f} 
+\index{World.\+hpp@{World.\+hpp}!annee\+Generation@{annee\+Generation}}
+\index{annee\+Generation@{annee\+Generation}!World.\+hpp@{World.\+hpp}}
+\subsubsection{\texorpdfstring{annee\+Generation()}{anneeGeneration()}}
+{\footnotesize\ttfamily const int annee\+Generation (\begin{DoxyParamCaption}\item[{22}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{_world_8hpp_aea9efc00a299b793738741c5c2d32316}{}\label{_world_8hpp_aea9efc00a299b793738741c5c2d32316} 
+\index{World.\+hpp@{World.\+hpp}!migrantscameroon\+\_\+congo@{migrantscameroon\+\_\+congo}}
+\index{migrantscameroon\+\_\+congo@{migrantscameroon\+\_\+congo}!World.\+hpp@{World.\+hpp}}
+\subsubsection{\texorpdfstring{migrantscameroon\+\_\+congo()}{migrantscameroon\_congo()}}
+{\footnotesize\ttfamily const int migrantscameroon\+\_\+congo (\begin{DoxyParamCaption}\item[{50 $\ast$}]{annee\+Generation }\end{DoxyParamCaption})}
+
+\hypertarget{_world_8hpp_a1a16e9a55cf14f56489a8a4d08d29100}{}\label{_world_8hpp_a1a16e9a55cf14f56489a8a4d08d29100} 
+\index{World.\+hpp@{World.\+hpp}!migrantscongo\+\_\+gabon@{migrantscongo\+\_\+gabon}}
+\index{migrantscongo\+\_\+gabon@{migrantscongo\+\_\+gabon}!World.\+hpp@{World.\+hpp}}
+\subsubsection{\texorpdfstring{migrantscongo\+\_\+gabon()}{migrantscongo\_gabon()}}
+{\footnotesize\ttfamily const int migrantscongo\+\_\+gabon (\begin{DoxyParamCaption}\item[{23 $\ast$}]{annee\+Generation }\end{DoxyParamCaption})}
+
+\hypertarget{_world_8hpp_a2609f68b19ecd967962de5e4d6b845d1}{}\label{_world_8hpp_a2609f68b19ecd967962de5e4d6b845d1} 
+\index{World.\+hpp@{World.\+hpp}!migrantsgabon\+\_\+cameroon@{migrantsgabon\+\_\+cameroon}}
+\index{migrantsgabon\+\_\+cameroon@{migrantsgabon\+\_\+cameroon}!World.\+hpp@{World.\+hpp}}
+\subsubsection{\texorpdfstring{migrantsgabon\+\_\+cameroon()}{migrantsgabon\_cameroon()}}
+{\footnotesize\ttfamily const int migrantsgabon\+\_\+cameroon (\begin{DoxyParamCaption}\item[{240 $\ast$}]{annee\+Generation }\end{DoxyParamCaption})}
+

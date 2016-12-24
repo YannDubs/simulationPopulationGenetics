@@ -1,0 +1,12 @@
+\form#0:$ N_i $
+\form#1:$ N_i*m $
+\form#2:$ (N_{tot}-N_i)*m $
+\form#3:$ N_i'= N_i - N_i*m +\frac{(N_{tot}-N_i)*m}{A-1} $
+\form#4:$ N_{tot} $
+\form#5:\[ f_i'= f_i - f_i*m +\frac{(1-f_i)*m}{A-1}= f_i(1-m-\frac{m}{A-1}) + \frac{m}{A-1} = f_i(1-\frac{A*m}{A-1}) + \frac{m}{A-1} \]
+\form#6:$ f_i $
+\form#7:$ s_i $
+\form#8:$ \sum f_k*(1+s_k)\ $
+\form#9:\[ f_i'= \frac{f_i*(1+s_i)}{\sum f_k*(1+s_k)} = \frac{f_i*(1+s_i)}{\sum f_k +\sum f_ks_k} = \frac{f_i*(1+s_i)}{1 +\sum f_ks_k} \]
+\form#10:$ f(N)= (1-m)*p^{2} + p*q $
+\form#11:$ f(S)= 0.3*q^{2} + p*q $

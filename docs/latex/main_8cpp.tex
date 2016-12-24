@@ -1,0 +1,185 @@
+\hypertarget{main_8cpp}{}\section{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.\+cpp@{src/main.\+cpp}}
+
+
+Model Wright-\/\+Fisher, Sickle Cell Anemia, Selection \& Mutation.  
+
+
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$tclap/\+Cmd\+Line.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Meta\+Pool.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Int\+Constraint\+T\+C\+L\+A\+P.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Vector\+Constraint\+T\+C\+L\+A\+P.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Proba\+Constraint\+T\+C\+L\+A\+P.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}World.\+hpp\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{main_8cpp_aa548afdb718b1f790eec9eeefd154e66}{proba\+Malarya\+Congo} (0.\+047)
+\item 
+const double \hyperlink{main_8cpp_a231a726224cf03a67a5529f2f552acc2}{proba\+Malarya\+Cameroon} (0.\+163)
+\item 
+const double \hyperlink{main_8cpp_a52508b83d5e2a8a65b3776012388ea56}{proba\+Malarya\+Gabon} (0.\+153)
+\item 
+long int \hyperlink{main_8cpp_a0559754684d9b272ec719deb6767b04f}{pop\+Congo} (45000)
+\item 
+long int \hyperlink{main_8cpp_ab042d9070ae42c094ac96d4ce7319929}{pop\+Cameroon} (230000)
+\item 
+long int \hyperlink{main_8cpp_af8e704f25356cd737bffa2de775a29b9}{pop\+Gabon} (16000)
+\item 
+void \hyperlink{main_8cpp_a54fd0c6e481cf32b7e08bc0bf95f9880}{affiche} (ostream \&f\+Stream, \hyperlink{class_world}{World} \&world, unsigned int const \&n\+Generations)
+\begin{DoxyCompactList}\small\item\em Display the Simulation Results in case of Drepanocitosis. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_ab612ae1ee262ee71db7821bdd45249c5}{affiche} (ostream \&f\+StreamA, ostream \&f\+StreamB, ostream \&f\+StreamC, \hyperlink{class_world}{World} \&world, unsigned int const \&n\+Generations)
+\begin{DoxyCompactList}\small\item\em Display the Simulation Results in case of Drepanocitosis. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a22021473cf765dada753efb11271f4f9}{affiche} (ostream \&f\+Stream, \hyperlink{class_metapool}{Metapool} \&set\+Of\+Pool, unsigned int const \&n\+Generations, bool is\+Bottleneck)
+\begin{DoxyCompactList}\small\item\em Display the Simulation Results. \end{DoxyCompactList}\item 
+int \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main Programm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Model Wright-\/\+Fisher, Sickle Cell Anemia, Selection \& Mutation. 
+
+\begin{DoxyAuthor}{Author}
+Yann Dubois et David Cleres 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12 november 2015 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 The main programm allows you to do\+:
+\begin{DoxyItemize}
+\item a modelisation of Wright Fisher in a context of total biological abstration
+\item a modelisation of the Natural Selection phenomena, taking in consideration the fitness of differents genes in relation to the others
+\item a modelisation of mutations occuring with a specified mutation rate.
+\item a modelisation of the evolution of the sickle cell anemia in three different countries. (Congo, Cameroon \& Gaboon) This simulation is based on real facts.
+\item a modelisation taking in concideration the bottleneck effect. This is often the case in natural crysis\textquotesingle{} in which a large part of the population is exitinct. In the major cases the most present population (in numeric terms will be the only one which survives at the end, but sometimes this effect can make a less crowed population be the new leader population in term of numeric amount. 
+\end{DoxyItemize}
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8cpp_a54fd0c6e481cf32b7e08bc0bf95f9880}{}\label{main_8cpp_a54fd0c6e481cf32b7e08bc0bf95f9880} 
+\index{main.\+cpp@{main.\+cpp}!affiche@{affiche}}
+\index{affiche@{affiche}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{affiche()}{affiche()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void affiche (\begin{DoxyParamCaption}\item[{ostream \&}]{f\+Stream,  }\item[{\hyperlink{class_world}{World} \&}]{world,  }\item[{unsigned int const \&}]{n\+Generations }\end{DoxyParamCaption})}
+
+
+
+Display the Simulation Results in case of Drepanocitosis. 
+
+Displays on the given stream {\itshape f\+Stream} the calculated frequences. This is the display function which is specific for the displaying of the simulation in which we take in consideration the Sickle Cell Anemia desease. This function is used to make the first output on cout stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em f\+Stream} & Is the output stream in which we eant to write the frequences \\
+\hline
+{\em world} & Is the \hyperlink{class_world}{World} containing our different Metapool\+Dreps (i.\+e. countries\+: Congo, Cameroon \& Gaboon) \\
+\hline
+{\em n\+Generations} & Is the number of generations on which we want to study our allelic evolution. \\
+\hline
+\end{DoxyParams}
+\hypertarget{main_8cpp_ab612ae1ee262ee71db7821bdd45249c5}{}\label{main_8cpp_ab612ae1ee262ee71db7821bdd45249c5} 
+\index{main.\+cpp@{main.\+cpp}!affiche@{affiche}}
+\index{affiche@{affiche}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{affiche()}{affiche()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void affiche (\begin{DoxyParamCaption}\item[{ostream \&}]{f\+StreamA,  }\item[{ostream \&}]{f\+StreamB,  }\item[{ostream \&}]{f\+StreamC,  }\item[{\hyperlink{class_world}{World} \&}]{world,  }\item[{unsigned int const \&}]{n\+Generations }\end{DoxyParamCaption})}
+
+
+
+Display the Simulation Results in case of Drepanocitosis. 
+
+Displays on the given stream {\itshape f\+Stream} the calculated frequences. This is the display function which is specific for the displaying of the simulation in which we take in consideration the Sickle Cell Anemia desease. This function writes the new frequences for each country in 3 different files.
+
+
+\begin{DoxyParams}{Parameters}
+{\em f\+Stream} & Is the output stream in which we eant to write the frequences \\
+\hline
+{\em world} & Is the \hyperlink{class_world}{World} containing our different Metapool\+Dreps (i.\+e. countries\+: Congo, Cameroon \& Gaboon) \\
+\hline
+{\em n\+Generations} & Is the number of generations on which we want to study our allelic evolution. \\
+\hline
+\end{DoxyParams}
+\hypertarget{main_8cpp_a22021473cf765dada753efb11271f4f9}{}\label{main_8cpp_a22021473cf765dada753efb11271f4f9} 
+\index{main.\+cpp@{main.\+cpp}!affiche@{affiche}}
+\index{affiche@{affiche}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{affiche()}{affiche()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void affiche (\begin{DoxyParamCaption}\item[{ostream \&}]{f\+Stream,  }\item[{\hyperlink{class_metapool}{Metapool} \&}]{set\+Of\+Pool,  }\item[{unsigned int const \&}]{n\+Generations,  }\item[{bool}]{is\+Bottleneck }\end{DoxyParamCaption})}
+
+
+
+Display the Simulation Results. 
+
+This function is an overload of the other affiche fonction. This function Displays on the given stream {\itshape f\+Stream} the calculated frequences. This is the display fonction which is specific for the displaying of the simulation in which we take in consideration Selection, mutation, the Wright-\/\+Fisher Model, ...
+
+
+\begin{DoxyParams}{Parameters}
+{\em f\+Stream} & Is the output stream in which we eant to write the frequences \\
+\hline
+{\em set\+Of\+Pool} & Is a metapool on which we will focus to study our allelic evolution. \\
+\hline
+{\em n\+Generations} & Is the number of generations on which we want to study our allelic evolution. \\
+\hline
+{\em is\+Bottleneck} & Is a boolean variable, that tells us if we are taking in consideration the bottleneckphenomena. \\
+\hline
+\end{DoxyParams}
+\hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Main Programm. 
+
+Main programme taking and interpreting the input of the user by using \hyperlink{namespace_t_c_l_a_p}{T\+C\+L\+AP} commands and calling the necessary methods in the different classes to enable us to make our simulations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{main_8cpp_ab042d9070ae42c094ac96d4ce7319929}{}\label{main_8cpp_ab042d9070ae42c094ac96d4ce7319929} 
+\index{main.\+cpp@{main.\+cpp}!pop\+Cameroon@{pop\+Cameroon}}
+\index{pop\+Cameroon@{pop\+Cameroon}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{pop\+Cameroon()}{popCameroon()}}
+{\footnotesize\ttfamily long int pop\+Cameroon (\begin{DoxyParamCaption}\item[{230000}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{main_8cpp_a0559754684d9b272ec719deb6767b04f}{}\label{main_8cpp_a0559754684d9b272ec719deb6767b04f} 
+\index{main.\+cpp@{main.\+cpp}!pop\+Congo@{pop\+Congo}}
+\index{pop\+Congo@{pop\+Congo}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{pop\+Congo()}{popCongo()}}
+{\footnotesize\ttfamily long int pop\+Congo (\begin{DoxyParamCaption}\item[{45000}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{main_8cpp_af8e704f25356cd737bffa2de775a29b9}{}\label{main_8cpp_af8e704f25356cd737bffa2de775a29b9} 
+\index{main.\+cpp@{main.\+cpp}!pop\+Gabon@{pop\+Gabon}}
+\index{pop\+Gabon@{pop\+Gabon}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{pop\+Gabon()}{popGabon()}}
+{\footnotesize\ttfamily long int pop\+Gabon (\begin{DoxyParamCaption}\item[{16000}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{main_8cpp_a231a726224cf03a67a5529f2f552acc2}{}\label{main_8cpp_a231a726224cf03a67a5529f2f552acc2} 
+\index{main.\+cpp@{main.\+cpp}!proba\+Malarya\+Cameroon@{proba\+Malarya\+Cameroon}}
+\index{proba\+Malarya\+Cameroon@{proba\+Malarya\+Cameroon}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{proba\+Malarya\+Cameroon()}{probaMalaryaCameroon()}}
+{\footnotesize\ttfamily const double proba\+Malarya\+Cameroon (\begin{DoxyParamCaption}\item[{0.}]{163 }\end{DoxyParamCaption})}
+
+\hypertarget{main_8cpp_aa548afdb718b1f790eec9eeefd154e66}{}\label{main_8cpp_aa548afdb718b1f790eec9eeefd154e66} 
+\index{main.\+cpp@{main.\+cpp}!proba\+Malarya\+Congo@{proba\+Malarya\+Congo}}
+\index{proba\+Malarya\+Congo@{proba\+Malarya\+Congo}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{proba\+Malarya\+Congo()}{probaMalaryaCongo()}}
+{\footnotesize\ttfamily const double proba\+Malarya\+Congo (\begin{DoxyParamCaption}\item[{0.}]{047 }\end{DoxyParamCaption})}
+
+\hypertarget{main_8cpp_a52508b83d5e2a8a65b3776012388ea56}{}\label{main_8cpp_a52508b83d5e2a8a65b3776012388ea56} 
+\index{main.\+cpp@{main.\+cpp}!proba\+Malarya\+Gabon@{proba\+Malarya\+Gabon}}
+\index{proba\+Malarya\+Gabon@{proba\+Malarya\+Gabon}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{proba\+Malarya\+Gabon()}{probaMalaryaGabon()}}
+{\footnotesize\ttfamily const double proba\+Malarya\+Gabon (\begin{DoxyParamCaption}\item[{0.}]{153 }\end{DoxyParamCaption})}
+

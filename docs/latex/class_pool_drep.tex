@@ -1,0 +1,155 @@
+\hypertarget{class_pool_drep}{}\section{Pool\+Drep Class Reference}
+\label{class_pool_drep}\index{Pool\+Drep@{Pool\+Drep}}
+
+
+generator class \hyperlink{class_pool_drep}{Pool\+Drep}  
+
+
+
+
+{\ttfamily \#include $<$Pool\+Drep.\+h$>$}
+
+Inheritance diagram for Pool\+Drep\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pool_drep}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_pool_drep_a04cfd52c354498fd622000e0dc683a49}{Pool\+Drep} (std\+::vector$<$ double $>$ const \&tab\+Freq, unsigned int const \&n\+Individu, double const \&proba\+Malarya, string const \&nom\+Pays)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_pool_drep_a28ae3aae52b8dca09a6828283e8019b4}{Pool\+Drep} ()=default
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_pool_drep_a4fba163580813690fbeb2d4ad0841a86}{next\+Generation\+General} () override
+\begin{DoxyCompactList}\small\item\em Calculates and affects the new freqencies of each alleles. \end{DoxyCompactList}\item 
+vector$<$ unsigned int $>$ \hyperlink{class_pool_drep_a5d13aa16dfcf87d3496518a8df67db72}{emigration} (unsigned int const \&n\+Migrant)
+\begin{DoxyCompactList}\small\item\em alleles of the emigrants \end{DoxyCompactList}\item 
+void \hyperlink{class_pool_drep_aa957ad7c22f08cff037e3ce92fecd663}{set\+World} (\hyperlink{class_world}{World} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Gives the \hyperlink{class_world}{World}. \end{DoxyCompactList}\item 
+void \hyperlink{class_pool_drep_a64f409df1a7815bebc4744472ec7b8ce}{set\+Case\+Metapool} (int const \&case\+Meta)
+\begin{DoxyCompactList}\small\item\em Gives an ID by giving the slot in the vector of Pools in which we are in order to know which country we are supposed to symbolise. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_pool_drep_a06de6a1171890c9902e1f5e20cd10523}{$\sim$\+Pool\+Drep} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor because \hyperlink{class_pool_drep}{Pool\+Drep} inheritates of \hyperlink{class_pool}{Pool}. And We are using vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+generator class \hyperlink{class_pool_drep}{Pool\+Drep} 
+
+Generates a pool of alleles affected by the sickle cell anemia. This is class inherits of pool and uses the sickle cell model, based on real values. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_pool_drep_a04cfd52c354498fd622000e0dc683a49}{}\label{class_pool_drep_a04cfd52c354498fd622000e0dc683a49} 
+\index{Pool\+Drep@{Pool\+Drep}!Pool\+Drep@{Pool\+Drep}}
+\index{Pool\+Drep@{Pool\+Drep}!Pool\+Drep@{Pool\+Drep}}
+\subsubsection{\texorpdfstring{Pool\+Drep()}{PoolDrep()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pool\+Drep\+::\+Pool\+Drep (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ const \&}]{tab\+Freq,  }\item[{unsigned int const \&}]{n\+Individu,  }\item[{double const \&}]{proba\+Malarya,  }\item[{string const \&}]{nom\+Pays }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Must provide vector containing the frequencies of the alleles {\itshape tab\+Freq}, sample size {\itshape n\+Individus}, the probability of this pool to be affected by the malaria desease {\itshape proba\+Malarya} and the name of the country {\itshape nom\+Pays} 
+\begin{DoxyParams}{Parameters}
+{\em tab\+Freq} & Vector containing the frequencies of the alleles must provide \\
+\hline
+{\em n\+Individus} & Sample size must provide \\
+\hline
+{\em proba\+Malarya} & Probability of being affected by the malaria desease in this country. \\
+\hline
+{\em nom\+Pays} & Name of the country (Congo, Cameroon or Gaboon) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pool_drep_a28ae3aae52b8dca09a6828283e8019b4}{}\label{class_pool_drep_a28ae3aae52b8dca09a6828283e8019b4} 
+\index{Pool\+Drep@{Pool\+Drep}!Pool\+Drep@{Pool\+Drep}}
+\index{Pool\+Drep@{Pool\+Drep}!Pool\+Drep@{Pool\+Drep}}
+\subsubsection{\texorpdfstring{Pool\+Drep()}{PoolDrep()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Pool\+Drep\+::\+Pool\+Drep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default Constructor. 
+
+\hypertarget{class_pool_drep_a06de6a1171890c9902e1f5e20cd10523}{}\label{class_pool_drep_a06de6a1171890c9902e1f5e20cd10523} 
+\index{Pool\+Drep@{Pool\+Drep}!````~Pool\+Drep@{$\sim$\+Pool\+Drep}}
+\index{````~Pool\+Drep@{$\sim$\+Pool\+Drep}!Pool\+Drep@{Pool\+Drep}}
+\subsubsection{\texorpdfstring{$\sim$\+Pool\+Drep()}{~PoolDrep()}}
+{\footnotesize\ttfamily Pool\+Drep\+::$\sim$\+Pool\+Drep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor because \hyperlink{class_pool_drep}{Pool\+Drep} inheritates of \hyperlink{class_pool}{Pool}. And We are using vectors. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_pool_drep_a5d13aa16dfcf87d3496518a8df67db72}{}\label{class_pool_drep_a5d13aa16dfcf87d3496518a8df67db72} 
+\index{Pool\+Drep@{Pool\+Drep}!emigration@{emigration}}
+\index{emigration@{emigration}!Pool\+Drep@{Pool\+Drep}}
+\subsubsection{\texorpdfstring{emigration()}{emigration()}}
+{\footnotesize\ttfamily vector$<$ unsigned int $>$ Pool\+Drep\+::emigration (\begin{DoxyParamCaption}\item[{unsigned int const \&}]{n\+Migrant }\end{DoxyParamCaption})}
+
+
+
+alleles of the emigrants 
+
+Returns a vector with the number of the alleles of each groups of emigrants of one country. The function also supresses the alleles of gone people from the m\+\_\+tab\+Freq vector (our vector containing all the alleles of the \hyperlink{class_pool}{Pool}. This vector of migrants is given to the \hyperlink{class_world}{World}. A further function in \hyperlink{class_world}{World} is responsable of the repartition of this migrants in their new country. (The number of migrants is fixed by a constant in the world where this function is called. 
+\begin{DoxyParams}{Parameters}
+{\em n\+Migrant} & Total amount of persons to take in m\+\_\+tab\+Freq. (BE C\+A\+R\+E\+F\+UL\+: the table is in frequencies and we want an amount of persons) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of vector of ints cintain the realamout of alleles migrating from one country to the others. 
+\end{DoxyReturn}
+\hypertarget{class_pool_drep_a4fba163580813690fbeb2d4ad0841a86}{}\label{class_pool_drep_a4fba163580813690fbeb2d4ad0841a86} 
+\index{Pool\+Drep@{Pool\+Drep}!next\+Generation\+General@{next\+Generation\+General}}
+\index{next\+Generation\+General@{next\+Generation\+General}!Pool\+Drep@{Pool\+Drep}}
+\subsubsection{\texorpdfstring{next\+Generation\+General()}{nextGenerationGeneral()}}
+{\footnotesize\ttfamily void Pool\+Drep\+::next\+Generation\+General (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates and affects the new freqencies of each alleles. 
+
+Writes the next generation (i.\+e. the new frequences) of each allele in the m\+\_\+tab\+Freq vector, considering either the probability of being affected by malaria and the probability of being affected by the Sickle cell anemia. There is a prooved correlation between the survival of anemia affected pateint to the malaria desease. (This patients are use to deal with less oxygen provided because of their deficient Erythrocytes. 
+
+Reimplemented from \hyperlink{class_pool_ad497f611cb592a6dd13f07b217bfd350}{Pool}.
+
+\hypertarget{class_pool_drep_a64f409df1a7815bebc4744472ec7b8ce}{}\label{class_pool_drep_a64f409df1a7815bebc4744472ec7b8ce} 
+\index{Pool\+Drep@{Pool\+Drep}!set\+Case\+Metapool@{set\+Case\+Metapool}}
+\index{set\+Case\+Metapool@{set\+Case\+Metapool}!Pool\+Drep@{Pool\+Drep}}
+\subsubsection{\texorpdfstring{set\+Case\+Metapool()}{setCaseMetapool()}}
+{\footnotesize\ttfamily void Pool\+Drep\+::set\+Case\+Metapool (\begin{DoxyParamCaption}\item[{int const \&}]{case\+Meta }\end{DoxyParamCaption})}
+
+
+
+Gives an ID by giving the slot in the vector of Pools in which we are in order to know which country we are supposed to symbolise. 
+
+When we create our table Meta\+Pool\+Drep in world we can\textquotesingle{}t know in advance which position in this table of Meta\+Pools we are occuping but also we don\textquotesingle{}t know which repeat of the experiment we are. This function enables us to know this. 
+\begin{DoxyParams}{Parameters}
+{\em case\+Meta} & Slot of storage in the vector of Pools \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pool_drep_aa957ad7c22f08cff037e3ce92fecd663}{}\label{class_pool_drep_aa957ad7c22f08cff037e3ce92fecd663} 
+\index{Pool\+Drep@{Pool\+Drep}!set\+World@{set\+World}}
+\index{set\+World@{set\+World}!Pool\+Drep@{Pool\+Drep}}
+\subsubsection{\texorpdfstring{set\+World()}{setWorld()}}
+{\footnotesize\ttfamily void Pool\+Drep\+::set\+World (\begin{DoxyParamCaption}\item[{\hyperlink{class_world}{World} $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Gives the \hyperlink{class_world}{World}. 
+
+When we create our Meta\+Pool\+Drep we can\textquotesingle{}t know in which world we are because a \hyperlink{class_world}{World} if selfdefined by a vector of Meta\+Pool\+Dreps. We have decided to first create the \hyperlink{class_world}{World} and then to give the adress of the studied world by using by setter function. This function is used in the constructor of \hyperlink{class_world}{World} class. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & Pointer on the world \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_pool_drep_8h}{Pool\+Drep.\+h}\item 
+src/\hyperlink{_pool_drep_8cpp}{Pool\+Drep.\+cpp}\end{DoxyCompactItemize}
